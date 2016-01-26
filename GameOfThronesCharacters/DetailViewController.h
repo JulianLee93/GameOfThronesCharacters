@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Characters.h"
+@protocol DetailViewDelegate <NSObject>
+
+@required
+
+@optional
+-(void)saveToCore:(Characters *)character;
+
+@end
+
 
 @interface DetailViewController : UIViewController
+@property (nonatomic, assign) id <DetailViewDelegate> delegate; 
 
 @end

@@ -9,8 +9,9 @@
 #import "GotTableViewController.h"
 #import "AppDelegate.h"
 #import "Characters.h"
+#import "DetailViewController.h"
 
-@interface GotTableViewController ()
+@interface GotTableViewController () <DetailViewDelegate>
 
 @property NSManagedObjectContext *moc;
 @property NSArray *coreCharacterData;
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     self.moc = appDelegate.managedObjectContext;
@@ -45,8 +47,20 @@
     [self loadCoreCharacterData];
 }
 
+-(void)saveToCore:(Characters *)character{
+    Characters *yourCharacter = [NSEntityDescription insertNewObjectForEntityForName:@"Characters" inManagedObjectContext:self.moc];
+    yourCharacter = character;
 
+    NSError *error;
+    if (error){
+        NSLog(@"%@", error.localizedDescription);
+    } else {
+        [self.moc save:&error];
+    }
+    [self loadCoreCharacterData];
+    [self.tableView reloadData];
 
+}
 
 - (void) loadCoreCharacterData {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Characters"];
@@ -116,7 +130,8 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    DetailViewController *destination = segue.destinationViewController;
+    destination.delegate = self;
 }
 
 
