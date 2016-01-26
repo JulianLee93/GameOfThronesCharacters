@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  GotTableViewController.h
 //  GameOfThronesCharacters
 //
 //  Created by Julian Lee on 1/26/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface GotTableViewController : UITableViewController
 
 @end
-
