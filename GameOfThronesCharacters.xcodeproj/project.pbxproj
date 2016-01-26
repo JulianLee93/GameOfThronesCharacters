@@ -17,6 +17,7 @@
 		B9BDB0F21C5821C600C35E37 /* gameofthrones.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9BDB0F11C5821C600C35E37 /* gameofthrones.plist */; };
 		B9BDB0F71C58256500C35E37 /* Characters+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BDB0F41C58256500C35E37 /* Characters+CoreDataProperties.m */; };
 		B9BDB0F81C58256500C35E37 /* Characters.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BDB0F61C58256500C35E37 /* Characters.m */; };
+		C6A863641C582FE600C3156C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A863631C582FE600C3156C /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		B9BDB0F41C58256500C35E37 /* Characters+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Characters+CoreDataProperties.m"; path = "../Characters+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B9BDB0F51C58256500C35E37 /* Characters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Characters.h; path = ../Characters.h; sourceTree = "<group>"; };
 		B9BDB0F61C58256500C35E37 /* Characters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Characters.m; path = ../Characters.m; sourceTree = "<group>"; };
+		C6A863621C582FE600C3156C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C6A863631C582FE600C3156C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				B9BDB0DD1C5820D500C35E37 /* Main.storyboard */,
+				C6A863621C582FE600C3156C /* DetailViewController.h */,
+				C6A863631C582FE600C3156C /* DetailViewController.m */,
 				B9BDB0EE1C58212500C35E37 /* GotTableViewController.h */,
 				B9BDB0EF1C58212500C35E37 /* GotTableViewController.m */,
 				B9BDB0D71C5820D500C35E37 /* AppDelegate.h */,
@@ -173,6 +178,7 @@
 				B9BDB0F71C58256500C35E37 /* Characters+CoreDataProperties.m in Sources */,
 				B9BDB0E21C5820D500C35E37 /* GameOfThronesCharacters.xcdatamodeld in Sources */,
 				B9BDB0D61C5820D500C35E37 /* main.m in Sources */,
+				C6A863641C582FE600C3156C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +327,7 @@
 				B9BDB0ED1C5820D500C35E37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
