@@ -9,9 +9,10 @@
 #import "DetailViewController.h"
 #import "GotTableViewController.h"
 #import "Characters.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController () <UITextFieldDelegate>
-@property Characters *myCharacter;
+@property NSManagedObjectContext *moc;
 
 @end
 
@@ -19,33 +20,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.myCharacter = [Characters new];
+    
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.moc = appDelegate.managedObjectContext;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-//    [self.characterDictionary setObject:textField.text forKey: textField.restorationIdentifier];
-    if ([textField.restorationIdentifier isEqualToString:@"characterTextField"]){
-        self.myCharacter.character = textField.text;
-    } else if ([textField.restorationIdentifier isEqualToString:@"houseTextField"]){
-        self.myCharacter.house = textField.text;
-    } else if ([textField.restorationIdentifier isEqualToString:@"genderTextField"]){
-        self.myCharacter.gender = textField.text;
-    } else if ([textField.restorationIdentifier isEqualToString:@"ageTextField"]){
-        self.myCharacter.age = [NSNumber numberWithInt:[textField.text intValue]];
-    } else if ([textField.restorationIdentifier isEqualToString:@"actorTextField"]){
-        NSLog(@"terdFinding");
-        self.myCharacter.actor = textField.text;
-        NSLog(@"%@", self.myCharacter.actor); 
-    }
-    
-    [textField resignFirstResponder];
-    return YES;
+    return [textField resignFirstResponder];
 }
 
 - (IBAction)onAddMeTouched:(id)sender {
-    NSLog(@"\n\n%@", self.myCharacter.actor); 
-//    [self.delegate saveToCore:self.myCharacter];
+    Characters *myCharacter = [NSEntityDescription insertNewObjectForEntityForName:@"Characters" inManagedObjectContext:self.moc];
+    for (UITextField *textField in self.view.subviews) {
+        if ([textField.restorationIdentifier isEqualToString:@"charTextField"]){
+            myCharacter.character = textField.text;
+        } else if ([textField.restorationIdentifier isEqualToString:@"houseTextField"]){
+            myCharacter.house = textField.text;
+        } else if ([textField.restorationIdentifier isEqualToString:@"genderTextField"]){
+            myCharacter.gender = textField.text;
+        } else if ([textField.restorationIdentifier isEqualToString:@"ageTextField"]){
+            myCharacter.age = [NSNumber numberWithInt:[textField.text intValue]];
+        } else if ([textField.restorationIdentifier isEqualToString:@"actorTextField"]){
+            myCharacter.actor = textField.text;
+        }
+    }
+    NSError *error;
+    [self.moc save:&error];
 }
+
+
 
 #pragma mark - Navigation
 
