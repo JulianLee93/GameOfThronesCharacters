@@ -81,7 +81,7 @@
     Characters *character = [self.coreCharacterData objectAtIndex:indexPath.row];
     cell.actorLabel.text = character.actor;
     cell.characterLabel.text = character.character;
-    cell.mainImage.image = character.picture; 
+    cell.mainImage.image = [UIImage imageWithData:character.picture];
     
     return cell;
 }
