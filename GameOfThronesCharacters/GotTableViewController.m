@@ -16,6 +16,8 @@
 
 @property NSManagedObjectContext *moc;
 @property NSArray *coreCharacterData;
+@property BOOL editModeOn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 
 @end
 
@@ -83,6 +85,55 @@
     
     return cell;
 }
+
+
+
+
+
+
+- (IBAction)editButton:(id)sender {
+    if (!self.editModeOn)
+    {
+        self.editModeOn = YES;
+        [sender setTitle:@"Done"];
+        [self.tableView setEditing:true animated:true];
+    }
+    else if (self.editModeOn)
+    {
+        self.editModeOn = false;
+        [sender setTitle:@"Edit"];
+        [self.tableView setEditing:false animated:true];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!self.editModeOn) {
+        self.editModeOn = TRUE;
+        [self.editButton setTitle:@"Done"];
+    }
+}
+
+
+-(void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.editModeOn) {
+        self.editModeOn = false;
+        [self.editButton setTitle:@"Edit"];
+    }
+}
+
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.nationalParksArray removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+
+
+
+
 
 
 /*

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8r9-ec-ct8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8r9-ec-ct8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -90,12 +90,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="dTV-Fx-CFB">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="Leb-q5-QKF">
+                            <connections>
+                                <action selector="editButton:" destination="VNa-Ve-5gF" id="ceK-a1-auO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6If-JH-PBo">
                             <connections>
                                 <segue destination="9oO-xS-CJx" kind="show" id="c55-zf-aRC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="Leb-q5-QKF" id="IWH-Mp-4p4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLz-Md-AGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
