@@ -2,7 +2,7 @@
 //  Characters+CoreDataProperties.h
 //  GameOfThronesCharacters
 //
-//  Created by Julian Lee on 1/26/16.
+//  Created by Andrew Miller on 1/26/16.
 //  Copyright © 2016 admin. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,11 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Characters (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *character;
-@property (nullable, nonatomic, retain) NSString *house;
-@property (nullable, nonatomic, retain) NSString *gender;
-@property (nullable, nonatomic, retain) NSNumber *age;
 @property (nullable, nonatomic, retain) NSString *actor;
+@property (nullable, nonatomic, retain) NSNumber *age;
+@property (nullable, nonatomic, retain) NSString *character;
+@property (nullable, nonatomic, retain) NSString *gender;
+@property (nullable, nonatomic, retain) NSString *house;
+@property (nullable, nonatomic, retain) NSData *picture;
 
 @end
 

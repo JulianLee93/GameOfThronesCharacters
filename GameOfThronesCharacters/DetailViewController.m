@@ -47,6 +47,11 @@
             }
         }
     }
+    
+    // load image
+    NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"1"]);
+    myCharacter.picture = imageData;
+    
     NSError *error;
     [self.moc save:&error];
     [self.delegate saveToCore];

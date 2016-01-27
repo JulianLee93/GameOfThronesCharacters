@@ -15,10 +15,10 @@
 		B9BDB0E71C5820D500C35E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BDB0E51C5820D500C35E37 /* LaunchScreen.storyboard */; };
 		B9BDB0F01C58212500C35E37 /* GotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BDB0EF1C58212500C35E37 /* GotTableViewController.m */; };
 		B9BDB0F21C5821C600C35E37 /* gameofthrones.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9BDB0F11C5821C600C35E37 /* gameofthrones.plist */; };
-		B9BDB0F71C58256500C35E37 /* Characters+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BDB0F41C58256500C35E37 /* Characters+CoreDataProperties.m */; };
 		B9BDB0F81C58256500C35E37 /* Characters.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BDB0F61C58256500C35E37 /* Characters.m */; };
 		B9BDB0FB1C5848F500C35E37 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BDB0FA1C5848F500C35E37 /* DetailTableViewCell.m */; };
 		C6A863641C582FE600C3156C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A863631C582FE600C3156C /* DetailViewController.m */; };
+		C6A863671C584E2900C3156C /* Characters+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A863661C584E2900C3156C /* Characters+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,14 +34,14 @@
 		B9BDB0EE1C58212500C35E37 /* GotTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotTableViewController.h; sourceTree = "<group>"; };
 		B9BDB0EF1C58212500C35E37 /* GotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotTableViewController.m; sourceTree = "<group>"; };
 		B9BDB0F11C5821C600C35E37 /* gameofthrones.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gameofthrones.plist; sourceTree = "<group>"; };
-		B9BDB0F31C58256500C35E37 /* Characters+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Characters+CoreDataProperties.h"; path = "../Characters+CoreDataProperties.h"; sourceTree = "<group>"; };
-		B9BDB0F41C58256500C35E37 /* Characters+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Characters+CoreDataProperties.m"; path = "../Characters+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B9BDB0F51C58256500C35E37 /* Characters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Characters.h; path = ../Characters.h; sourceTree = "<group>"; };
 		B9BDB0F61C58256500C35E37 /* Characters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Characters.m; path = ../Characters.m; sourceTree = "<group>"; };
 		B9BDB0F91C5848F500C35E37 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		B9BDB0FA1C5848F500C35E37 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
 		C6A863621C582FE600C3156C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C6A863631C582FE600C3156C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		C6A863651C584E2900C3156C /* Characters+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Characters+CoreDataProperties.h"; path = "../Characters+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C6A863661C584E2900C3156C /* Characters+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Characters+CoreDataProperties.m"; path = "../Characters+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				B9BDB0E81C5820D500C35E37 /* Info.plist */,
 				B9BDB0F11C5821C600C35E37 /* gameofthrones.plist */,
 				B9BDB0E01C5820D500C35E37 /* GameOfThronesCharacters.xcdatamodeld */,
-				B9BDB0F31C58256500C35E37 /* Characters+CoreDataProperties.h */,
-				B9BDB0F41C58256500C35E37 /* Characters+CoreDataProperties.m */,
+				C6A863651C584E2900C3156C /* Characters+CoreDataProperties.h */,
+				C6A863661C584E2900C3156C /* Characters+CoreDataProperties.m */,
 				B9BDB0F51C58256500C35E37 /* Characters.h */,
 				B9BDB0F61C58256500C35E37 /* Characters.m */,
 				B9BDB0D41C5820D500C35E37 /* Supporting Files */,
@@ -180,8 +180,8 @@
 				B9BDB0F01C58212500C35E37 /* GotTableViewController.m in Sources */,
 				B9BDB0F81C58256500C35E37 /* Characters.m in Sources */,
 				B9BDB0D91C5820D500C35E37 /* AppDelegate.m in Sources */,
-				B9BDB0F71C58256500C35E37 /* Characters+CoreDataProperties.m in Sources */,
 				B9BDB0E21C5820D500C35E37 /* GameOfThronesCharacters.xcdatamodeld in Sources */,
+				C6A863671C584E2900C3156C /* Characters+CoreDataProperties.m in Sources */,
 				B9BDB0D61C5820D500C35E37 /* main.m in Sources */,
 				B9BDB0FB1C5848F500C35E37 /* DetailTableViewCell.m in Sources */,
 				C6A863641C582FE600C3156C /* DetailViewController.m in Sources */,

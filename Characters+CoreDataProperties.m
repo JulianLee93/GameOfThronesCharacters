@@ -2,7 +2,7 @@
 //  Characters+CoreDataProperties.m
 //  GameOfThronesCharacters
 //
-//  Created by Julian Lee on 1/26/16.
+//  Created by Andrew Miller on 1/26/16.
 //  Copyright © 2016 admin. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,10 +13,11 @@
 
 @implementation Characters (CoreDataProperties)
 
-@dynamic character;
-@dynamic house;
-@dynamic gender;
-@dynamic age;
 @dynamic actor;
+@dynamic age;
+@dynamic character;
+@dynamic gender;
+@dynamic house;
+@dynamic picture;
 
 @end

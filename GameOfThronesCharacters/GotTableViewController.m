@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Characters.h"
 #import "DetailViewController.h"
+#import "DetailTableViewCell.h"
 
 @interface GotTableViewController () <DetailViewDelegate>
 
@@ -74,9 +75,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    DetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     Characters *character = [self.coreCharacterData objectAtIndex:indexPath.row];
-    cell.textLabel.text = character.character;
+    cell.actorLabel.text = character.actor;
+    cell.characterLabel.text = character.character;
+    cell.mainImage.image = character.picture; 
+    
     return cell;
 }
 
