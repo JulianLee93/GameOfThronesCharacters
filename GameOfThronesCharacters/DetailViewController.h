@@ -13,7 +13,7 @@
 @required
 
 @optional
--(void)saveToCore:(Characters *)character;
+-(void)saveToCore;
 
 @end
 

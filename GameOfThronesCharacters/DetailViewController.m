@@ -32,23 +32,25 @@
 
 - (IBAction)onAddMeTouched:(id)sender {
     Characters *myCharacter = [NSEntityDescription insertNewObjectForEntityForName:@"Characters" inManagedObjectContext:self.moc];
-    for (UITextField *textField in self.view.subviews) {
-        if ([textField.restorationIdentifier isEqualToString:@"charTextField"]){
-            myCharacter.character = textField.text;
-        } else if ([textField.restorationIdentifier isEqualToString:@"houseTextField"]){
-            myCharacter.house = textField.text;
-        } else if ([textField.restorationIdentifier isEqualToString:@"genderTextField"]){
-            myCharacter.gender = textField.text;
-        } else if ([textField.restorationIdentifier isEqualToString:@"ageTextField"]){
-            myCharacter.age = [NSNumber numberWithInt:[textField.text intValue]];
-        } else if ([textField.restorationIdentifier isEqualToString:@"actorTextField"]){
-            myCharacter.actor = textField.text;
+    for (UIStackView *stackView in self.view.subviews) {
+        for (UITextField *textField in stackView.subviews) {
+            if ([textField.restorationIdentifier isEqualToString:@"charTextField"]){
+                myCharacter.character = textField.text;
+            } else if ([textField.restorationIdentifier isEqualToString:@"houseTextField"]){
+                myCharacter.house = textField.text;
+            } else if ([textField.restorationIdentifier isEqualToString:@"genderTextField"]){
+                myCharacter.gender = textField.text;
+            } else if ([textField.restorationIdentifier isEqualToString:@"ageTextField"]){
+                myCharacter.age = [NSNumber numberWithInt:[textField.text intValue]];
+            } else if ([textField.restorationIdentifier isEqualToString:@"actorTextField"]){
+                myCharacter.actor = textField.text;
+            }
         }
     }
     NSError *error;
     [self.moc save:&error];
+    [self.delegate saveToCore];
 }
-
 
 
 #pragma mark - Navigation

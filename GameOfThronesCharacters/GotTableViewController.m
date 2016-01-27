@@ -47,19 +47,8 @@
     [self loadCoreCharacterData];
 }
 
--(void)saveToCore:(Characters *)character{
-    Characters *yourCharacter = [NSEntityDescription insertNewObjectForEntityForName:@"Characters" inManagedObjectContext:self.moc];
-    yourCharacter = character;
-
-    NSError *error;
-    if (error){
-        NSLog(@"%@", error.localizedDescription);
-    } else {
-        [self.moc save:&error];
-    }
+-(void)saveToCore {
     [self loadCoreCharacterData];
-    [self.tableView reloadData];
-
 }
 
 - (void) loadCoreCharacterData {
